@@ -103,14 +103,6 @@ Key columns:
 
 ---
 
-## 📊 Key Business Questions Answered
-- Do discounts actually increase revenue or only reduce price?
-- Which brands contribute the highest revenue?
-- Who are the high-risk sellers?
-- Which months generate maximum revenue?
-- Which products require urgent stock replenishment?
-
----
 
 ## 📁 SQL Views Created
 - `delivery_speed`
