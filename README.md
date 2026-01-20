@@ -1,100 +1,126 @@
 # 📊 Flipkart Sales Analysis using MySQL
 
 ## 📌 Project Overview
-This project analyzes Flipkart-style e-commerce sales data using **MySQL** to uncover insights related to:
-- Sales performance
-- Discount impact
-- Seller reliability
-- Brand contribution
-- Inventory and supply risk
-- Time-based revenue trends
+This project performs an in-depth **sales and business analysis** on Flipkart-style e-commerce data using **MySQL**.  
+The goal is to derive **actionable insights** related to sales performance, discounts, seller reliability, inventory risk, and time-based trends.
 
-The project is designed to simulate a **real-world data analyst / business analyst use case**.
+This project simulates a **real-world data analyst use case** and demonstrates strong SQL querying and analytical skills.
 
 ---
 
-## 🗂️ Dataset
-- **Source**: Simulated Flipkart product sales data  
-- **Format**: CSV  
-- **Records Include**:
-  - Product details
-  - Seller & brand information
-  - Pricing & discounts
-  - Ratings & reviews
-  - Stock & sales volume
-  - Listing dates
+## 🗂️ Dataset Description
+- **Type:** E-commerce product sales data
+- **Format:** CSV
+- **Records Include:**
+  - Product and category details
+  - Brand and seller information
+  - Pricing, discounts, and final price
+  - Ratings and review counts
+  - Stock availability and units sold
+  - Listing dates and delivery details
 
-📁 File: `data/flipkard.csv`
+📁 Dataset File: `flipkard.csv`
 
 ---
 
-## 🛠️ Tools & Technologies
+## 🛠️ Tools & Technologies Used
 - **MySQL**
 - SQL Views
 - Window Functions
 - Aggregate Functions
-- Date & Time Analysis
+- Date & Time Functions
 
 ---
 
 ## 🧱 Database Schema
-Key fields used:
-- `product_id`
+Main table: `product_table`
+
+Key columns:
+- `product_id` (Primary Key)
 - `product_name`
-- `brand`
-- `seller`
+- `category`, `brand`
+- `seller`, `seller_city`
 - `price`, `discount_percent`, `final_price`
-- `rating`, `units_sold`, `stock_available`
+- `rating`, `review_count`
+- `units_sold`, `stock_available`
 - `listing_date`
+- `delivery_days`
+- `seller_rating`
 
 ---
 
-## 📈 Key Analysis Performed
+## 📈 Analysis Performed
 
 ### 🔹 Sales & Revenue Analysis
 - Total revenue and units sold
 - Brand-wise revenue contribution
 - Year-wise and month-wise sales trends
-- Year-over-Year (YoY) & Month-over-Month (MoM) growth
+- Year-over-Year (YoY) growth analysis
+- Month-over-Month (MoM) growth analysis
+- Peak sales month identification
 
-### 🔹 Discount Impact
-- Discount vs No-discount performance
-- Revenue per unit by discount percentage
-- Discount bucket analysis (Low / Medium / High)
+---
 
-### 🔹 Seller Performance & Risk
-- Seller sales volume and stock
-- Seller risk classification (Low / Medium / High)
-- Seller reliability index
+### 🔹 Discount Impact Analysis
+- Discount vs No Discount performance
+- Revenue and units sold by discount bucket
+- Revenue per unit across discount percentages
+- Evaluation of discount effectiveness
 
-### 🔹 Product & Inventory Insights
-- Delivery speed categorization
-- Supply risk detection (Overstock / Urgent Restock)
-- Product performance score calculation
+---
+
+### 🔹 Seller Performance & Risk Analysis
+- Seller-wise sales and stock analysis
+- Average seller rating evaluation
+- Seller risk classification:
+  - Low Risk
+  - Medium Risk
+  - High Risk
+- Seller reliability index calculation
+
+---
+
+### 🔹 Product & Inventory Analysis
+- Delivery speed classification (Fast / Standard / Slow)
+- Supply risk identification:
+  - Overstock
+  - Urgent Restock
+  - Normal
+- Product performance score calculation based on:
+  - Ratings
+  - Units sold
+  - Discount percentage
 
 ---
 
 ## 🧠 Advanced SQL Concepts Used
-- `CASE WHEN`
-- `WINDOW FUNCTIONS (LAG, RANK)`
-- `VIEWS`
-- `AGGREGATIONS`
+- `CASE WHEN` conditional logic
+- `WINDOW FUNCTIONS` (`LAG`, `RANK`)
+- `VIEWS` for reusable analytics
+- `AGGREGATE FUNCTIONS`
 - `DATE FUNCTIONS`
-- `NULL HANDLING`
+- `NULL HANDLING` using `COALESCE` and `NULLIF`
 
 ---
 
-## 📊 Sample Business Questions Answered
-- Do discounts really increase revenue?
-- Which brands contribute the most to sales?
+## 📊 Key Business Questions Answered
+- Do discounts actually increase revenue or only reduce price?
+- Which brands contribute the highest revenue?
 - Who are the high-risk sellers?
-- Which months generate peak revenue?
-- Which products need urgent restocking?
+- Which months generate maximum revenue?
+- Which products require urgent stock replenishment?
 
 ---
 
-## 🚀 How to Run This Project
+## 📁 SQL Views Created
+- `delivery_speed`
+- `discount_performance`
+- `seller_risk_analysis`
+- `monthly_business`
+- `supplying_risk`
+- `seller_reliability`
+- `executive_summary`
 
-1. Create database and tables:
-```sql
-source sql/database_setup.sql;
+---
+
+
