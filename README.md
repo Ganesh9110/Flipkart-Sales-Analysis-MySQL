@@ -1,4 +1,5 @@
 # 📊 Flipkart Sales Analysis using MySQL
+A comprehensive SQL project analyzing e-commerce sales, discounts, seller performance, and inventory risks using Flipkart-style data.
 
 ## 📌 Project Overview
 This project performs an in-depth **sales and business analysis** on Flipkart-style e-commerce data using **MySQL**.  
@@ -23,12 +24,12 @@ This project simulates a **real-world data analyst use case** and demonstrates s
 
 ---
 
-## 🛠️ Tools & Technologies Used
-- **MySQL**
-- SQL Views
-- Window Functions
-- Aggregate Functions
-- Date & Time Functions
+## 🛠️ Tools & Technologies
+- MySQL
+- SQL Views & Window Functions
+- Aggregate & Date Functions
+- Data Cleaning & Validation (NULL handling, COALESCE, NULLIF)
+
 
 ---
 
@@ -63,20 +64,15 @@ Key columns:
 
 ### 🔹 Discount Impact Analysis
 - Discount vs No Discount performance
-- Revenue and units sold by discount bucket
-- Revenue per unit across discount percentages
-- Evaluation of discount effectiveness
+- Revenue per unit across discount buckets
+- Effectiveness of discounts on sales
 
 ---
 
 ### 🔹 Seller Performance & Risk Analysis
-- Seller-wise sales and stock analysis
-- Average seller rating evaluation
-- Seller risk classification:
-  - Low Risk
-  - Medium Risk
-  - High Risk
-- Seller reliability index calculation
+- Seller-wise performance & stock
+- Risk classification (Low / Medium / High)
+- Reliability index calculation
 
 ---
 
@@ -105,14 +101,22 @@ Key columns:
 
 
 ## 📁 SQL Views Created
-- `delivery_speed`
-- `discount_performance`
-- `seller_risk_analysis`
-- `monthly_business`
-- `supplying_risk`
-- `seller_reliability`
-- `executive_summary`
+    View Name                             Purpose
+- delivery_speed                =         Classifies products by delivery time
+- discount_performance          =         Evaluates discount impact on revenue
+- seller_risk_analysis          =         Categorizes sellers into risk levels
+- monthly_business              =         Tracks monthly sales & revenue
+- supplying_risk                =         Flags inventory risks
+- seller_reliability            =         Calculates seller reliability index
+- executive_summary             =         Provides overall business KPIs
 
 ---
 
+## 🚀 How to Run
+1. Clone this repository
+2. Import `flipkard.csv` into MySQL
+3. Run `schema.sql` → creates database & tables
+4. Run `analysis.sql` → executes queries & views
+5. Explore results with `SELECT`
 
+-----
