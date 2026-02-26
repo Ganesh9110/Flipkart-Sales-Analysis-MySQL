@@ -101,7 +101,8 @@ Key columns:
 
 
 ## 📁 SQL Views Created
-    View Name                             Purpose
+
+   - View Name                             Purpose
 - delivery_speed                =         Classifies products by delivery time
 - discount_performance          =         Evaluates discount impact on revenue
 - seller_risk_analysis          =         Categorizes sellers into risk levels
